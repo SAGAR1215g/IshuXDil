@@ -124,7 +124,7 @@ async def gen_thumb(videoid):
 
             image4 = ImageDraw.Draw(image2)
             image4.text((10, 10), "DIL[ISHU] x MUSIC", fill="white", font = font1, align ="left")
-            image4.text((1080, 25), "DIL[HUBBYxWIFY]ISHU", fill="white", font = font1, align ="left")
+            image4.text((1065, 10), "DIL[HUBBYxWIFY]ISHU", fill="white", font = font1, align ="left")
             image4.text((670, 150), "NOW PLAYING", fill="white", font = font2, stroke_width=2, stroke_fill="red", align ="left") 
 
             # title
