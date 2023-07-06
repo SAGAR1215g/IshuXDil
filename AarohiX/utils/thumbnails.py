@@ -123,7 +123,8 @@ async def gen_thumb(videoid):
             font4 = ImageFont.truetype('AarohiX/assets/font2.ttf', 35)
 
             image4 = ImageDraw.Draw(image2)
-            image4.text((10, 10), "DIL[ISHU] x MUSIC", fill="white", font = font1, align ="left") 
+            image4.text((10, 10), "DIL[ISHU] x MUSIC", fill="white", font = font1, align ="left")
+            image4.text((10, 10), "Ishu[Wife♡Hubby]Dil", fill="white", font = font1, align ="right")
             image4.text((670, 150), "NOW PLAYING", fill="white", font = font2, stroke_width=2, stroke_fill="red", align ="left") 
 
             # title
@@ -135,12 +136,10 @@ async def gen_thumb(videoid):
             views = f"Views : {views}"
             duration = f"Duration : {duration} Mins"
             channel = f"Channel : {channel}"
-            Powered By = f"PowereD By : {DiL}"
 
             image4.text((670, 450), text=views, fill="red", font = font4, align ="left") 
             image4.text((670, 500), text=duration, fill="white", font = font4, align ="left") 
             image4.text((670, 550), text=channel, fill="green", font = font4, align ="left")
-            image4.text((670, 600), text=Powered By, fill="red", font = font4, align ="left")
             
             image2 = ImageOps.expand(image2,border=20,fill=make_col())
             image2 = image2.convert('RGB')
