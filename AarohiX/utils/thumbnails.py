@@ -139,6 +139,7 @@ async def gen_thumb(videoid):
             image4.text((670, 450), text=views, fill="red", font = font4, align ="left") 
             image4.text((670, 500), text=duration, fill="white", font = font4, align ="left") 
             image4.text((670, 550), text=channel, fill="green", font = font4, align ="left")
+            image4.text((670, 600), text=Powered By : DILxISHU, fill="red", font = font4, align ="left")
             
             image2 = ImageOps.expand(image2,border=20,fill=make_col())
             image2 = image2.convert('RGB')
