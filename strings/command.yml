@@ -8,7 +8,7 @@ GSTATS_COMMAND : ["gstats", "globalstats"]
 STATS_COMMAND : ["stats"]
 LANGUAGE_COMMAND : ["lundlang", "lavdalele", "langlund"]
 SHAYARI_COMMAND : ["shayari", "dil", "love", "gf", "bf", "aaru"]
-DIL_COMMAND : ["dil", "love", "feelings"]
+DIL_COMMAND : ["dil", "feelings"]
 
 # Play Commands
 PLAY_COMMAND : ["play", "vplay", "cplay", "cvplay", "playforce", "vplayforce", "cplayforce", "cvplayforce", "ishu", "vishu", "dil", "vdil"]
