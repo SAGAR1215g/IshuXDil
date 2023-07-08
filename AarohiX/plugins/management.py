@@ -28,7 +28,7 @@ MANAGEMENT_COMMAND = get_command("MANAGEMENT_COMMAND")
 @app.on_callback_query(
     filters.regex("settings_back") & ~BANNED_USERS
 )
-async def private(
+async def management_aprivate(
     client: app, update: Union[types.Message, types.CallbackQuery]
 ):
     is_callback = isinstance(update, types.CallbackQuery)
@@ -42,8 +42,7 @@ async def private(
         _ = get_string(language)
         keyboard = management_pannel(_, True)
         if update.message.photo:
-            await update.edit_message_text(
-                _["management_1"].format(config.SUPPORT_HEHE), reply_markup=keyboard
+            await update.edit_message_text(_["management_1"].format(config.SUPPORT_HEHE), reply_markup=keyboard
             )
         else:
             await update.edit_message_text(
@@ -82,7 +81,7 @@ async def management_com_group(client, message: Message, _):
 
 @app.on_callback_query(filters.regex("management_callback") & ~BANNED_USERS)
 @languageCB
-async def cb(client, CallbackQuery, _):
+async def management_cb(client, CallbackQuery, _):
     callback_data = CallbackQuery.data.strip()
     cb = callback_data.split(None, 1)[1]
     keyboard = management_back_markup(_)
