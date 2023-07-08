@@ -1,3 +1,4 @@
+from .management import *
 from .help import *
 from .play import *
 from .playlist import *
