@@ -26,11 +26,11 @@ def management_pannel(_, START: Union[bool, int] = None):
         [
             [
                 InlineKeyboardButton(
-                    text="☹️ᴀᴅᴍɪɴ☹️",
+                    text="ᴀᴅᴍɪɴ",
                     callback_data="management_callback hb1",
                 ),
                 InlineKeyboardButton(
-                    text="🥰ᴀᴜᴛʜ🥰",
+                    text="ᴀᴜᴛʜ",
                     callback_data="management_callback hb2",
                 ),
                 InlineKeyboardButton(
@@ -82,7 +82,7 @@ def management_pannel(_, START: Union[bool, int] = None):
             ],
             [
                 InlineKeyboardButton(
-                    text="🔻ᴍᴇɴᴛɪᴏɴ ᴄᴏᴍᴍᴀɴᴅs🔻",
+                    text="🔻ᴍᴇɴᴛɪᴏn🔻",
                     callback_data="management_callback hb13",
                 ),
             ],
