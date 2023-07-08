@@ -26,9 +26,9 @@ MANAGEMENT_COMMAND = get_command("MANAGEMENT_COMMAND")
     & ~BANNED_USERS
 )
 @app.on_callback_query(
-    filters.regex("settings_back") & ~BANNED_USERS
+    filters.regex("settings_back_management") & ~BANNED_USERS
 )
-async def management_aprivate(
+async def management_private(
     client: app, update: Union[types.Message, types.CallbackQuery]
 ):
     is_callback = isinstance(update, types.CallbackQuery)
@@ -42,7 +42,8 @@ async def management_aprivate(
         _ = get_string(language)
         keyboard = management_pannel(_, True)
         if update.message.photo:
-            await update.edit_message_text(_["management_1"].format(config.SUPPORT_HEHE), reply_markup=keyboard
+            await update.edit_message_text(
+              _["management_1"].format(config.SUPPORT_HEHE), reply_markup=keyboard
             )
         else:
             await update.edit_message_text(
