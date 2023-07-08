@@ -28,7 +28,7 @@ MANAGEMENT_COMMAND = get_command("MANAGEMENT_COMMAND")
 @app.on_callback_query(
     filters.regex("settings_back") & ~BANNED_USERS
 )
-async def helper_private(
+async def private(
     client: app, update: Union[types.Message, types.CallbackQuery]
 ):
     is_callback = isinstance(update, types.CallbackQuery)
@@ -82,7 +82,7 @@ async def management_com_group(client, message: Message, _):
 
 @app.on_callback_query(filters.regex("management_callback") & ~BANNED_USERS)
 @languageCB
-async def helper_cb(client, CallbackQuery, _):
+async def cb(client, CallbackQuery, _):
     callback_data = CallbackQuery.data.strip()
     cb = callback_data.split(None, 1)[1]
     keyboard = management_back_markup(_)
