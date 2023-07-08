@@ -86,7 +86,6 @@ async def helper_cb(client, CallbackQuery, _):
     callback_data = CallbackQuery.data.strip()
     cb = callback_data.split(None, 1)[1]
     keyboard = management_back_markup(_)
-            return await CallbackQuery.answer()
     try:
         await CallbackQuery.answer()
     except:
