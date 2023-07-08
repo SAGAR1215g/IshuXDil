@@ -1,5 +1,5 @@
-from .management import *
 from .help import *
+from .management import *
 from .play import *
 from .playlist import *
 from .queue import *
